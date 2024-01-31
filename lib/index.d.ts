@@ -6,7 +6,7 @@ declare module 'dependency-graph' {
   /**
    * @template K
    */
-  export class DepGraph<T, K = string> {
+  export class DepGraph<T, K = any> {
     /**
      * Creates an instance of DepGraph with optional Options.
      */
@@ -124,7 +124,7 @@ declare module 'dependency-graph' {
     overallOrder(leavesOnly?: boolean): K[];
   }
 
-  export class DepGraphCycleError<K = string> extends Error {
+  export class DepGraphCycleError<K = any> extends Error {
     cyclePath: K[];
   }
 }
